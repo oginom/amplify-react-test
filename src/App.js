@@ -29,7 +29,7 @@ class App extends Component {
         console.log('eventData: ', eventData)
         const todo = eventData.value.data.onCreateTodo
         const todos = [...this.state.todos.filter(content => {
-          return (content.title !== todo.title)
+          return (content.name !== todo.name)
         }), todo]
         this.setState({ todos })
       }
